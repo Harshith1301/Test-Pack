@@ -1,0 +1,73 @@
+import child from "./child"
+const parent =()=>{
+return (<div>
+<Child name="ramu"/>
+   </div>)
+}
+
+const child=({props})=>{
+return (<div>
+{props.name}
+   </div>)
+}
+
+export default memo(child)
+
+useEffect(()=>{
+
+})
+
+
+custom.js
+export const useInput = (initialValue)=>{
+const [value, setValue]=useState(initialValue)
+
+const bind={
+value,
+onChange:(e)=>{
+setValue(e.target.value);
+}
+return [value, bind];
+}
+
+form.js
+
+import {useInput} from "./useInput"
+
+const[firstN, bindF]=useInput('');
+
+<form>
+<input {...bindF} />
+</form>
+
+dynamic.js
+
+user.js
+
+<route path="user:userId"/>
+
+const User=()=>{
+const params=useParams();
+const userId=params.userId;
+
+<div>user dls {userID}</div>
+}
+
+
+function spread(x,y,z){
+return `${x}, ${y}, ${z}`
+}
+spread(...[1,2,3]);
+
+let [x, y, ...rest]=[1,2,3,4,5,6];
+x=1, y=2,  rest=3,4
+
+
+
+
+
+
+
+
+
+
